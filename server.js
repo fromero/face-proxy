@@ -6,6 +6,9 @@ async function handleRequest(request) {
   });
   if (response.ok) {
     const res = await response.json();
+
+    console.log(res);
+    
     return new Response(JSON.stringify(res), {
       headers: {
         "Access-Control-Allow-Headers": "*",
