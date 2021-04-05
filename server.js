@@ -1,4 +1,7 @@
 async function handleRequest(request) {
+    console.log("log");
+    console.debug("debug");
+    console.warn("warn");
     const sURL = request.url;
     const url = new URL(sURL);
     const searchParamas = url.searchParams;
