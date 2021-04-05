@@ -3,7 +3,7 @@ async function handleRequest(request) {
     const url = new URL(sURL);
     const searchParamas = url.searchParams;
     console.debug(searchParamas);
-    const cif = searchParamas.get(cif);
+    const cif = searchParamas.get("cif");
     const response = await fetch(`https://face.gob.es/api/v2/relaciones?cif=${cif}` , {
     headers: {
       accept: "application/json",
