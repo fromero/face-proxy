@@ -15,6 +15,16 @@ async function handleRequest(request) {
       },
     });
   }
+
+  return new Response(
+    JSON.stringify({ message: "couldn't process your request" }),
+    {
+      status: 500,
+      headers: {
+        "content-type": "application/json; charset=UTF-8",
+      },
+    },
+  );
 }
 
 addEventListener("fetch", (event) => {
