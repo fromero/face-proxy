@@ -1,5 +1,4 @@
-import {ServerRequest} from 'https://deno.land/std/http/server.ts'
-async function handleRequest(request: ServerRequest) {
+async function handleRequest(request) {
     const response = await fetch("https://https://face.gob.es/api/v2/relaciones?cif=P0200300B", {
     headers: {
       accept: "application/json",
