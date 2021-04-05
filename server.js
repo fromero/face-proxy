@@ -1,8 +1,7 @@
 async function handleRequest(request) {
-    const sURL = await request.url;
+    const sURL = request.url;
     const url = new URL(sURL);
     const searchParamas = url.searchParams;
-    console.debug(searchParamas);
     const cif = searchParamas.get("cif");
     const response = await fetch(`https://face.gob.es/api/v2/relaciones?cif=${cif}` , {
     headers: {
@@ -11,9 +10,6 @@ async function handleRequest(request) {
   });
   if (response.ok) {
     const res = await response.json();
-
-    console.log(res);
-
     return new Response(JSON.stringify(res), {
       headers: {
         "Access-Control-Allow-Headers": "*",
