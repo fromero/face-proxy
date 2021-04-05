@@ -1,4 +1,4 @@
-async function handleRequest(request) {
+async function handleRequest(request: any) {
     const response = await fetch("https://https://face.gob.es/api/v2/relaciones?cif=P0200300B", {
     headers: {
       accept: "application/json",
